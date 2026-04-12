@@ -13,12 +13,12 @@ function loadVisitorCount() {
         document.getElementById('visitor-count').innerText =
           'This page has been viewed ' + data.views + ' times';
       } else {
-        document.getElementById('visitor-count').innerText = '';
+        document.getElementById('visitor-count').innerText = 'This page has been viewed: Counter not available.';
       }
     })
     .catch((error) => {
       console.error('Could not load visitor count:', error);
-      document.getElementById('visitor-count').innerText = '';
+      document.getElementById('visitor-count').innerText = 'This page has been viewed: Counter not available.';
     });
 }
 
