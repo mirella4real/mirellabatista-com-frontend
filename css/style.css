@@ -33,7 +33,9 @@ h3 {
 .left-column {
 }
 .right-column {
-  margin-left: 40px;
+  margin-left: 20px;
+  background-color: #f9f9f9;
+  padding: 10px;
 }
 .right-column-header {
   margin-top: 40px;
@@ -45,5 +47,19 @@ h3 {
 #visitor-count {
   color: #666;
   font-style: italic;
+}
+.resume-footer {
+  grid-column: span 2;
+  margin-top: 40px;
+  text-align: left;
+  color: #666;
   font-size: 0.8em;
+  padding-bottom: 10px;
+}
+.resume-footer a {
+  color: #2f3c82;
+  text-decoration: underline;
+}
+.resume-footer a:hover {
+  text-decoration: underline;
 }
