@@ -50,6 +50,7 @@ jobs:
             --exclude "*.config.js" \
             --exclude ".prettierrc" \
             --exclude "package*.json" \
+            --exclude "README.md" \
             --delete
 
       - name: Invalidate CloudFront cache
