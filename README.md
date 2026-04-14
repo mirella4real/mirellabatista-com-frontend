@@ -55,10 +55,10 @@ workflow that:
 
 ## What I Learned
 
-*A full write-up is coming in a blog post. Topics will include: static site hosting on AWS,
-CloudFront cache management, OIDC authentication, and building a CI/CD pipeline from scratch.*
+_A full write-up is coming in a blog post. Topics will include: static site hosting on AWS,
+CloudFront cache management, OIDC authentication, and building a CI/CD pipeline from scratch._
 
 ## Related
 
 - [Backend repo](https://github.com/mirella4real/mirellabatista-com-backend) — serverless visitor
-counter (Lambda + DynamoDB + API Gateway + Terraform)
+  counter (Lambda + DynamoDB + API Gateway + Terraform)
