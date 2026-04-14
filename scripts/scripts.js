@@ -1,5 +1,5 @@
 function loadVisitorCount() {
-  fetch('https://pxfm85ox10.execute-api.us-east-1.amazonaws.com/count', {
+  fetch('__COUNT_API_ENDPOINT__', {
     method: 'POST',
   })
     .then((response) => {
