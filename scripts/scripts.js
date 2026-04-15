@@ -1,3 +1,18 @@
+/**
+ * Fetches the visitor count from the API and updates the page.
+ *
+ * The API endpoint (`__COUNT_API_ENDPOINT__`) is a placeholder replaced at
+ * deploy time by a GitHub Actions workflow step using a repository secret.
+ * The endpoint points to an AWS API Gateway route backed by a Lambda function
+ * that increments a DynamoDB counter and returns the updated view count.
+ *
+ * On success: updates the `#visitor-count` element with the total view count
+ * returned in `data.views`.
+ *
+ * On failure (non-OK HTTP response, missing `views` field, or network error):
+ * logs the error to the console and displays "Counter not available." in the
+ * `#visitor-count` element.
+ */
 function loadVisitorCount() {
   fetch('__COUNT_API_ENDPOINT__', {
     method: 'POST',
