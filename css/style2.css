@@ -346,6 +346,22 @@ strong { font-weight: 500; }
   border: none;
 }
 
+.hero__video-caption {
+  margin-top: var(--sp-3);
+  font-size: var(--text-sm);
+  color: var(--color-charcoal);
+  opacity: 0.7;
+  text-align: center;
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.hero__video-caption a {
+  color: var(--color-plum);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Credential bar */
 .hero__credentials {
   background: var(--color-dusty-blue);
