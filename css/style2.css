@@ -1284,3 +1284,132 @@ strong { font-weight: 500; }
   line-height: 1.7;
   max-width: none;
 }
+
+
+/* =============================================
+   Connect + Social
+   ============================================= */
+.connect__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0;
+  padding-top: var(--sp-12);
+  padding-bottom: var(--sp-16);
+}
+
+.connect__linkedin {
+  padding-right: var(--sp-10);
+  border-right: 1px solid var(--color-dusty-blue);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.connect__instagram {
+  padding-left: var(--sp-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.connect__col-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.connect__linkedin-logo {
+  width: 36px;
+  height: 36px;
+  background: #0077B5;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.connect__linkedin-logo svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.connect__instagram-logo {
+  width: 36px;
+  height: 36px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.connect__instagram-logo svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.connect__col-handle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.connect__col-text {
+  font-size: var(--text-sm);
+  color: var(--color-charcoal);
+  line-height: 1.65;
+  opacity: 0.85;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.connect__col-link {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-plum);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.connect__col-link:hover {
+  opacity: 0.75;
+}
+
+.connect__posts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-4);
+  margin-top: var(--sp-2);
+}
+
+.connect__posts .instagram-media {
+  width: 100% !important;
+  min-width: unset !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .connect__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connect__linkedin {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--color-dusty-blue);
+    padding-bottom: var(--sp-8);
+  }
+
+  .connect__instagram {
+    padding-left: 0;
+    padding-top: var(--sp-8);
+  }
+
+  .connect__posts {
+    grid-template-columns: 1fr;
+  }
+}
