@@ -482,6 +482,7 @@ strong { font-weight: 500; }
    Section banner (parallax header)
    ============================================= */
 .section-banner {
+  position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
