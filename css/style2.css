@@ -626,6 +626,9 @@ strong { font-weight: 500; }
   line-height: 1.7;
   margin-bottom: 0;
   max-width: none;
+}
+
+.about-site__body--lead {
   border-top: 1px solid var(--color-dusty-blue);
   padding-top: var(--sp-5);
 }
