@@ -113,7 +113,17 @@
         </div>
       </section>
 
-      
+      <!-- About this site -->
+      <section class="about-site section" id="about-site">
+        <div class="container">
+          <div class="about-site__card">
+            <p class="about-site__heading">About this site | AI tools & Cloud Resume Challenge</p>
+            <p class="about-site__body">This site is one way I keep my hands on the tools. I designed and developed it co-creating with Claude and Claude Code, owning every architectural decision and reviewing every line. This reflects how I believe AI tools should be used in engineering: as a thinking partner that accelerates learning and execution, not a replacement for understanding. </br></br> 
+              Completion followed the <a href="https://cloudresumechallenge.dev/">Cloud Resume Challenge (AWS 2026 Version)</a>. It runs entirely on AWS: static assets on S3 behind CloudFront, a serverless visitor counter built on Lambda, DynamoDB, and API Gateway, and all infrastructure managed as code with Terraform. Every push deploys automatically through GitHub Actions using OIDC authentication, so no credentials are ever stored in the pipeline. More information in the <a href="#projects">Projects section</a>.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Experience -->
       <section class="experience section" id="experience">
         <div class="section-banner" style="background-image: url('assets/images/section-experience-1.jpg')">
