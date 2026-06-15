@@ -716,6 +716,24 @@ strong { font-weight: 500; }
   }
 }
 
+.experience__resume {
+  padding-top: var(--sp-8);
+  padding-bottom: var(--sp-4);
+}
+
+.experience__resume-link {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-plum);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.experience__resume-link:hover {
+  opacity: 0.75;
+}
+
 /* =============================================
    Skills & Tools
    ============================================= */
@@ -885,6 +903,7 @@ strong { font-weight: 500; }
 /* =============================================
    Speaking
    ============================================= */
+.experience__intro,
 .speaking__intro {
   padding-top: var(--sp-12);
   padding-bottom: var(--sp-6);
@@ -893,6 +912,7 @@ strong { font-weight: 500; }
   gap: var(--sp-3);
 }
 
+.experience__intro-text,
 .speaking__intro-text {
   font-size: var(--text-base);
   color: var(--color-charcoal);
