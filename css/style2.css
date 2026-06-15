@@ -1226,6 +1226,19 @@ strong { font-weight: 500; }
   }
 }
 
+.press-callout__summary {
+  font-size: var(--text-base);
+  color: var(--color-charcoal);
+  line-height: 1.7;
+  margin: var(--sp-4) 0 0;
+  max-width: none;
+}
+
+.press-callout__summary-title {
+  color: var(--color-plum);
+  font-style: italic;
+}
+
 /* =============================================
    Achievements
    ============================================= */
