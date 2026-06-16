@@ -18,3 +18,25 @@ navLinks.querySelectorAll('a').forEach((link) => {
     hamburger.setAttribute('aria-expanded', false);
   });
 });
+
+// Video thumbnail tap-to-play (mobile)
+const videoThumbnail = document.getElementById('video-thumbnail');
+const videoWrapper = document.querySelector('.hero__video-wrapper');
+
+if (videoThumbnail && videoWrapper) {
+  const activate = (e) => {
+    e.preventDefault();
+    videoThumbnail.style.display = 'none';
+    videoWrapper.style.display = 'block';
+    videoWrapper.querySelector('iframe').src =
+      'https://www.youtube.com/embed/u1nH3fps6NE?autoplay=1&rel=0&modestbranding=1';
+  };
+
+  videoThumbnail.addEventListener('click', activate);
+  videoThumbnail.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      activate();
+    }
+  });
+}
