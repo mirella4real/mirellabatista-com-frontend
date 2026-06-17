@@ -26,7 +26,12 @@ if (pills.length && pillsContainer) {
       containerRect.left -
       containerRect.width / 2 +
       pillRect.width / 2;
-    pillsContainer.scrollBy({ left: offset, behavior: 'smooth' });
+    const maxScroll = pillsContainer.scrollWidth - pillsContainer.clientWidth;
+    const targetScroll = Math.max(
+      0,
+      Math.min(pillsContainer.scrollLeft + offset, maxScroll)
+    );
+    pillsContainer.scrollTo({ left: targetScroll, behavior: 'smooth' });
   };
 
   const updateActivePill = () => {
