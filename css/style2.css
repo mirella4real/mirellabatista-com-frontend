@@ -327,6 +327,10 @@ strong {
   padding-bottom: var(--sp-16);
 }
 
+.hero__text {
+  align-self: start;
+}
+
 .hero__name {
   font-size: var(--text-5xl);
   font-weight: 500;
