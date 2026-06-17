@@ -274,7 +274,10 @@ strong {
 /* Mobile nav overrides */
 @media (max-width: 767px) {
   .nav__inner {
-    height: 48px;
+    height: auto;
+    padding-top: var(--sp-4);
+    padding-bottom: var(--sp-2);
+    align-items: flex-start;
   }
 
   .nav__subtitle {
@@ -510,7 +513,7 @@ strong {
 /* Hero responsive */
 @media (max-width: 767px) {
   .hero {
-    padding-top: var(--sp-4);
+    padding-top: 1.2rem;
   }
 
   .hero__inner {
