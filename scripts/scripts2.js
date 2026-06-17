@@ -1,23 +1,56 @@
-// Nav hamburger toggle
-const hamburger = document.getElementById('nav-hamburger');
-const navLinks = document.getElementById('nav-links');
+// Pill nav: highlight active section on scroll and scroll pill into view
+const pills = document.querySelectorAll('.nav__pill');
+const pillsContainer = document.querySelector('.nav__pills-list');
 
-hamburger.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('is-open');
-  hamburger.setAttribute('aria-expanded', isOpen);
-  hamburger.setAttribute(
-    'aria-label',
-    isOpen ? 'Close navigation menu' : 'Open navigation menu'
-  );
-});
+if (pills.length && pillsContainer) {
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  let currentActiveId = null;
+  let rafPending = false;
 
-// Close nav when a link is clicked on mobile
-navLinks.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('is-open');
-    hamburger.setAttribute('aria-expanded', false);
-  });
-});
+  const setActivePill = (id) => {
+    pills.forEach((pill) => {
+      const isActive = pill.getAttribute('href') === `#${id}`;
+      pill.classList.toggle('is-active', isActive);
+      if (isActive) {
+        const containerRect = pillsContainer.getBoundingClientRect();
+        const pillRect = pill.getBoundingClientRect();
+        const offset =
+          pillRect.left -
+          containerRect.left -
+          containerRect.width / 2 +
+          pillRect.width / 2;
+        pillsContainer.scrollBy({ left: offset, behavior: 'smooth' });
+      }
+    });
+  };
+
+  const updateActivePill = () => {
+    const scrollMid = window.scrollY + window.innerHeight * 0.35;
+    let active = sections[0];
+    for (const section of sections) {
+      if (section.offsetTop <= scrollMid) {
+        active = section;
+      }
+    }
+    if (active.id !== currentActiveId) {
+      currentActiveId = active.id;
+      setActivePill(active.id);
+    }
+  };
+
+  const onScroll = () => {
+    if (!rafPending) {
+      rafPending = true;
+      requestAnimationFrame(() => {
+        updateActivePill();
+        rafPending = false;
+      });
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  updateActivePill();
+}
 
 // Video thumbnail tap-to-play (mobile)
 const videoThumbnail = document.getElementById('video-thumbnail');

@@ -14,6 +14,7 @@ module.exports = [
         document: 'readonly',
         console: 'readonly',
         fetch: 'readonly',
+        requestAnimationFrame: 'readonly',
         // Node.js globals (for config files)
         require: 'readonly',
         module: 'readonly',
