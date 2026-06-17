@@ -987,6 +987,11 @@ strong {
 
 .speaking.section {
   padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.writing.section {
+  padding-top: calc(var(--section-gap) / 2);
 }
 
 .experience__resume-link {
@@ -1193,6 +1198,10 @@ strong {
   gap: var(--sp-3);
 }
 
+.speaking__intro {
+  padding-bottom: calc(var(--sp-6) * 1.25);
+}
+
 .experience__intro-text,
 .speaking__intro-text,
 .projects__intro-text,
@@ -1209,6 +1218,7 @@ strong {
   .skills__intro-text,
   .projects__intro-text,
   .achievements__intro-text,
+  .speaking__intro-text,
   .role-card__summary,
   .role-card__bullets,
   .project-card__desc {
@@ -1274,10 +1284,15 @@ strong {
 .talk-card__desc {
   font-size: var(--text-sm);
   color: var(--color-charcoal);
-  line-height: 1.65;
-  opacity: 0.75;
+  line-height: 1.7;
   margin-bottom: 0;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .talk-card__desc {
+    line-height: 1.4;
+  }
 }
 
 .talk-card__logo {
@@ -1338,6 +1353,12 @@ strong {
   color: var(--color-charcoal);
   line-height: 1.7;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .press-callout__intro-text {
+    line-height: 1.4;
+  }
 }
 
 .press-callout__card {
@@ -1436,6 +1457,12 @@ strong {
   line-height: 1.7;
   margin: var(--sp-4) 0 0;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .press-callout__summary {
+    line-height: 1.4;
+  }
 }
 
 .press-callout__summary-title {
