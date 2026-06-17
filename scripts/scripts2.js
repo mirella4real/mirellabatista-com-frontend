@@ -8,20 +8,25 @@ if (pills.length && pillsContainer) {
   let rafPending = false;
 
   const setActivePill = (id) => {
-    pills.forEach((pill) => {
-      const isActive = pill.getAttribute('href') === `#${id}`;
-      pill.classList.toggle('is-active', isActive);
-      if (isActive) {
-        const containerRect = pillsContainer.getBoundingClientRect();
-        const pillRect = pill.getBoundingClientRect();
-        const offset =
-          pillRect.left -
-          containerRect.left -
-          containerRect.width / 2 +
-          pillRect.width / 2;
-        pillsContainer.scrollBy({ left: offset, behavior: 'smooth' });
-      }
+    const matchingPill = Array.from(pills).find((pill) => {
+      const href = pill.getAttribute('href');
+      return href === `#${id}` || (href === '#' && id === sections[0].id);
     });
+
+    if (!matchingPill) return;
+
+    pills.forEach((pill) =>
+      pill.classList.toggle('is-active', pill === matchingPill)
+    );
+
+    const containerRect = pillsContainer.getBoundingClientRect();
+    const pillRect = matchingPill.getBoundingClientRect();
+    const offset =
+      pillRect.left -
+      containerRect.left -
+      containerRect.width / 2 +
+      pillRect.width / 2;
+    pillsContainer.scrollBy({ left: offset, behavior: 'smooth' });
   };
 
   const updateActivePill = () => {
