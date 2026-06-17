@@ -992,6 +992,11 @@ strong {
 
 .writing.section {
   padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.bookshelf.section {
+  padding-top: calc(var(--section-gap) / 2);
 }
 
 .experience__resume-link {
@@ -1592,10 +1597,15 @@ strong {
 .article-card__desc {
   font-size: var(--text-sm);
   color: var(--color-charcoal);
-  line-height: 1.65;
-  opacity: 0.8;
+  line-height: 1.7;
   margin-bottom: 0;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .article-card__desc {
+    line-height: 1.4;
+  }
 }
 
 .article-card__footer {
@@ -1631,6 +1641,12 @@ strong {
   color: var(--color-charcoal);
   line-height: 1.7;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .writing__intro-text {
+    line-height: 1.4;
+  }
 }
 
 /* =============================================
