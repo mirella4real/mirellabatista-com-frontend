@@ -513,6 +513,7 @@ strong {
   .hero__inner {
     grid-template-columns: 1fr;
     gap: var(--sp-6);
+    padding-bottom: var(--sp-8);
   }
 
   .hero__name br {
