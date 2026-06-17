@@ -452,11 +452,6 @@ strong {
   margin-bottom: 0;
 }
 
-.hero__video-caption a {
-  color: var(--color-plum);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
 
 /* Credential bar */
 .hero__credentials {
