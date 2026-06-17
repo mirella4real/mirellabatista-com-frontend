@@ -1046,30 +1046,12 @@ strong {
 }
 
 .skill-pill {
-  font-size: var(--text-sm);
-  font-weight: 400;
+  font-size: var(--text-xs);
+  font-weight: 500;
   color: var(--color-navy);
-  background: var(--color-bg);
-  border: 1.5px solid var(--color-dusty-blue);
-  padding: var(--sp-2) var(--sp-4);
-  border-radius: 20px;
-  transition:
-    background var(--transition-fast),
-    color var(--transition-fast),
-    border-color var(--transition-fast);
-}
-
-.skill-pill:hover {
   background: var(--color-dusty-blue);
-  color: var(--color-navy);
-  border-color: var(--color-dusty-blue);
-}
-
-@media (max-width: 767px) {
-  .skill-pill {
-    font-size: var(--text-xs);
-    padding: var(--sp-1) var(--sp-3);
-  }
+  padding: 2px var(--sp-2);
+  border-radius: 20px;
 }
 
 /* =============================================
