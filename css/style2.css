@@ -294,7 +294,7 @@ strong {
   :root {
     --text-4xl: 2rem;
     --text-5xl: 2rem;
-    --section-gap: var(--sp-16);
+    --section-gap: var(--sp-8);
     --container-pad: var(--sp-4);
   }
 }
@@ -695,6 +695,10 @@ strong {
     border-left: 2px solid var(--color-dusty-blue);
     padding-right: 0;
     padding-left: var(--sp-5);
+  }
+
+  .about__body p {
+    line-height: 1.4;
   }
 }
 
