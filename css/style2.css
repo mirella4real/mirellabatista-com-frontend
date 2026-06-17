@@ -972,6 +972,11 @@ strong {
 
 .skills.section {
   padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.projects.section {
+  padding-top: calc(var(--section-gap) / 2);
 }
 
 .experience__resume-link {
@@ -1032,6 +1037,13 @@ strong {
   background: var(--color-dusty-blue);
   color: var(--color-navy);
   border-color: var(--color-dusty-blue);
+}
+
+@media (max-width: 767px) {
+  .skill-pill {
+    font-size: var(--text-xs);
+    padding: var(--sp-1) var(--sp-3);
+  }
 }
 
 /* =============================================
@@ -1161,7 +1173,8 @@ strong {
    ============================================= */
 .experience__intro,
 .speaking__intro,
-.projects__intro {
+.projects__intro,
+.skills__intro {
   padding-top: var(--sp-12);
   padding-bottom: var(--sp-6);
   display: flex;
@@ -1171,7 +1184,8 @@ strong {
 
 .experience__intro-text,
 .speaking__intro-text,
-.projects__intro-text {
+.projects__intro-text,
+.skills__intro-text {
   font-size: var(--text-base);
   color: var(--color-charcoal);
   line-height: 1.7;
