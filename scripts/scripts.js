@@ -73,9 +73,15 @@ document.querySelectorAll('.role-card__bullets').forEach((bullets) => {
   bullets.after(btn);
 
   btn.addEventListener('click', () => {
+    const btnTopBefore = btn.getBoundingClientRect().top;
     const isOpen = bullets.classList.toggle('is-open');
     btn.setAttribute('aria-expanded', isOpen);
     btn.textContent = isOpen ? 'Hide details ↑' : 'Show details ↓';
+
+    if (!isOpen) {
+      const btnTopAfter = btn.getBoundingClientRect().top;
+      window.scrollBy({ top: btnTopAfter - btnTopBefore, behavior: 'instant' });
+    }
   });
 });
 
