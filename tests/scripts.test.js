@@ -6,6 +6,9 @@ global.requestAnimationFrame = (cb) => cb();
 // Mock Element.scrollTo — jsdom doesn't implement it on elements
 Element.prototype.scrollTo = jest.fn();
 
+// Mock window.scrollBy — jsdom doesn't implement it
+window.scrollBy = jest.fn();
+
 // Mock fetch — prevents the visitor counter from making real network calls
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -185,5 +188,22 @@ describe('role card toggle', () => {
     expect(bullets.classList.contains('is-open')).toBe(false);
     expect(btn.getAttribute('aria-expanded')).toBe('false');
     expect(btn.textContent).toBe('Show details ↓');
+  });
+
+  it('scrolls to keep the button in place when closing', () => {
+    const btn = document.querySelector('.role-card__toggle');
+    const scrollBySpy = jest.spyOn(window, 'scrollBy');
+    btn.getBoundingClientRect = jest
+      .fn()
+      .mockReturnValueOnce({ top: 300 }) // open click: btnTopBefore
+      .mockReturnValueOnce({ top: 300 }) // close click: btnTopBefore
+      .mockReturnValueOnce({ top: 100 }); // close click: btnTopAfter
+    btn.click();
+    btn.click();
+    expect(scrollBySpy).toHaveBeenCalledWith({
+      top: -200,
+      behavior: 'instant',
+    });
+    scrollBySpy.mockRestore();
   });
 });
