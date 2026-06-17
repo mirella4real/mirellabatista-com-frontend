@@ -705,6 +705,10 @@ strong {
 /* =============================================
    About this site
    ============================================= */
+.about-site.section {
+  padding-block: var(--sp-6);
+}
+
 .about-site__card {
   background: #fff;
   border-radius: var(--radius-lg);
@@ -782,6 +786,10 @@ strong {
 
   .about-site__heading {
     font-size: var(--text-lg);
+  }
+
+  .about-site__body {
+    line-height: 1.4;
   }
 }
 
