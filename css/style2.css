@@ -997,6 +997,11 @@ strong {
 
 .bookshelf.section {
   padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.connect.section {
+  padding-top: calc(var(--section-gap) / 2);
 }
 
 .experience__resume-link {
@@ -1706,6 +1711,12 @@ strong {
   max-width: none;
 }
 
+@media (max-width: 767px) {
+  .bookshelf__text {
+    line-height: 1.4;
+  }
+}
+
 .bookshelf__link {
   font-size: var(--text-sm);
   font-weight: 500;
@@ -1759,15 +1770,25 @@ strong {
   }
 
   .bookshelf__jar {
+    order: 1;
     padding-right: 0;
     border-right: none;
-    border-bottom: 1px solid var(--color-dusty-blue);
-    padding-bottom: var(--sp-8);
+    border-top: 1px solid var(--color-dusty-blue);
+    border-bottom: none;
+    padding-top: var(--sp-10);
+    padding-bottom: 0;
+  }
+
+  .bookshelf__jar .bookshelf__photo {
+    width: 80%;
+    margin: 0 auto;
   }
 
   .bookshelf__reading {
+    order: -1;
     padding-left: 0;
-    padding-top: var(--sp-8);
+    padding-top: 0;
+    padding-bottom: var(--sp-4);
   }
 }
 
@@ -1777,6 +1798,12 @@ strong {
   line-height: 1.6;
   opacity: 0.85;
   margin-top: var(--sp-1);
+}
+
+@media (max-width: 767px) {
+  .bookshelf__book-note {
+    line-height: 1.4;
+  }
 }
 
 .bookshelf__figure--2026 {
