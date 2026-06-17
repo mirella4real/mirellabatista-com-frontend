@@ -977,6 +977,26 @@ strong {
 
 .projects.section {
   padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.achievements.section {
+  padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.speaking.section {
+  padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.writing.section {
+  padding-top: calc(var(--section-gap) / 2);
+  padding-bottom: calc(var(--section-gap) / 2);
+}
+
+.bookshelf.section {
+  padding-top: calc(var(--section-gap) / 2);
 }
 
 .experience__resume-link {
@@ -999,7 +1019,7 @@ strong {
   display: flex;
   flex-direction: column;
   gap: var(--sp-10);
-  padding-top: var(--sp-12);
+  padding-top: var(--sp-6);
   padding-bottom: var(--sp-8);
 }
 
@@ -1053,7 +1073,7 @@ strong {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-6);
-  padding-top: var(--sp-12);
+  padding-top: var(--sp-6);
   padding-bottom: var(--sp-8);
 }
 
@@ -1174,7 +1194,8 @@ strong {
 .experience__intro,
 .speaking__intro,
 .projects__intro,
-.skills__intro {
+.skills__intro,
+.achievements__intro {
   padding-top: var(--sp-12);
   padding-bottom: var(--sp-6);
   display: flex;
@@ -1182,10 +1203,15 @@ strong {
   gap: var(--sp-3);
 }
 
+.speaking__intro {
+  padding-bottom: calc(var(--sp-6) * 1.25);
+}
+
 .experience__intro-text,
 .speaking__intro-text,
 .projects__intro-text,
-.skills__intro-text {
+.skills__intro-text,
+.achievements__intro-text {
   font-size: var(--text-base);
   color: var(--color-charcoal);
   line-height: 1.7;
@@ -1194,8 +1220,13 @@ strong {
 
 @media (max-width: 767px) {
   .experience__intro-text,
+  .skills__intro-text,
+  .projects__intro-text,
+  .achievements__intro-text,
+  .speaking__intro-text,
   .role-card__summary,
-  .role-card__bullets {
+  .role-card__bullets,
+  .project-card__desc {
     line-height: 1.4;
   }
 }
@@ -1258,10 +1289,15 @@ strong {
 .talk-card__desc {
   font-size: var(--text-sm);
   color: var(--color-charcoal);
-  line-height: 1.65;
-  opacity: 0.75;
+  line-height: 1.7;
   margin-bottom: 0;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .talk-card__desc {
+    line-height: 1.4;
+  }
 }
 
 .talk-card__logo {
@@ -1322,6 +1358,12 @@ strong {
   color: var(--color-charcoal);
   line-height: 1.7;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .press-callout__intro-text {
+    line-height: 1.4;
+  }
 }
 
 .press-callout__card {
@@ -1422,6 +1464,12 @@ strong {
   max-width: none;
 }
 
+@media (max-width: 767px) {
+  .press-callout__summary {
+    line-height: 1.4;
+  }
+}
+
 .press-callout__summary-title {
   color: var(--color-plum);
   font-style: italic;
@@ -1434,8 +1482,8 @@ strong {
   display: flex;
   flex-direction: column;
   gap: var(--sp-10);
-  padding-top: var(--sp-12);
-  padding-bottom: var(--sp-16);
+  padding-top: var(--sp-6);
+  padding-bottom: var(--sp-6);
 }
 
 .achievements__group-title {
@@ -1549,10 +1597,15 @@ strong {
 .article-card__desc {
   font-size: var(--text-sm);
   color: var(--color-charcoal);
-  line-height: 1.65;
-  opacity: 0.8;
+  line-height: 1.7;
   margin-bottom: 0;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .article-card__desc {
+    line-height: 1.4;
+  }
 }
 
 .article-card__footer {
@@ -1588,6 +1641,12 @@ strong {
   color: var(--color-charcoal);
   line-height: 1.7;
   max-width: none;
+}
+
+@media (max-width: 767px) {
+  .writing__intro-text {
+    line-height: 1.4;
+  }
 }
 
 /* =============================================
