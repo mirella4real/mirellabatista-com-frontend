@@ -1179,7 +1179,8 @@ strong {
 .experience__intro,
 .speaking__intro,
 .projects__intro,
-.skills__intro {
+.skills__intro,
+.achievements__intro {
   padding-top: var(--sp-12);
   padding-bottom: var(--sp-6);
   display: flex;
@@ -1190,7 +1191,8 @@ strong {
 .experience__intro-text,
 .speaking__intro-text,
 .projects__intro-text,
-.skills__intro-text {
+.skills__intro-text,
+.achievements__intro-text {
   font-size: var(--text-base);
   color: var(--color-charcoal);
   line-height: 1.7;
@@ -1201,6 +1203,7 @@ strong {
   .experience__intro-text,
   .skills__intro-text,
   .projects__intro-text,
+  .achievements__intro-text,
   .role-card__summary,
   .role-card__bullets,
   .project-card__desc {
