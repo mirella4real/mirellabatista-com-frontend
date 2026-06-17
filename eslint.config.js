@@ -23,4 +23,22 @@ module.exports = [
       },
     },
   },
+  {
+    files: ['tests/**/*.test.js'],
+    languageOptions: {
+      globals: {
+        // Jest globals
+        describe: 'readonly',
+        it: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        jest: 'readonly',
+        // Node.js / jsdom globals available in test environment
+        global: 'readonly',
+        Element: 'readonly',
+        KeyboardEvent: 'readonly',
+      },
+    },
+  },
 ];

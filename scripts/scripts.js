@@ -85,7 +85,7 @@ const videoWrapper = document.querySelector('.hero__video-wrapper');
 
 if (videoThumbnail && videoWrapper) {
   const activate = (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     videoThumbnail.style.display = 'none';
     videoWrapper.style.display = 'block';
     videoWrapper.querySelector('iframe').src =
