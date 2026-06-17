@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js-enabled');
+
 // Pill nav: highlight active section on scroll and scroll pill into view
 const pills = document.querySelectorAll('.nav__pill');
 const pillsContainer = document.querySelector('.nav__pills-list');
@@ -61,6 +63,21 @@ if (pills.length && pillsContainer) {
   window.addEventListener('scroll', onScroll, { passive: true });
   updateActivePill();
 }
+
+// Role card collapsible bullets
+document.querySelectorAll('.role-card__bullets').forEach((bullets) => {
+  const btn = document.createElement('button');
+  btn.className = 'role-card__toggle';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.textContent = 'Show details ↓';
+  bullets.after(btn);
+
+  btn.addEventListener('click', () => {
+    const isOpen = bullets.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', isOpen);
+    btn.textContent = isOpen ? 'Hide details ↑' : 'Show details ↓';
+  });
+});
 
 // Video thumbnail tap-to-play (mobile)
 const videoThumbnail = document.getElementById('video-thumbnail');
