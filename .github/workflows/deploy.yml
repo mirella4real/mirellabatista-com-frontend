@@ -37,6 +37,9 @@ jobs:
       - name: Inject API endpoint
         run: sed -i 's|__COUNT_API_ENDPOINT__|${{ secrets.COUNT_API_ENDPOINT }}|g' scripts/scripts.js
 
+      - name: Inject cache-busting version
+        run: sed -i "s|__CACHE_VERSION__|$(date +%s)|g" index.html
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
