@@ -294,7 +294,7 @@ strong {
   :root {
     --text-4xl: 2rem;
     --text-5xl: 2rem;
-    --section-gap: var(--sp-16);
+    --section-gap: var(--sp-8);
     --container-pad: var(--sp-4);
   }
 }
@@ -450,12 +450,6 @@ strong {
   text-align: center;
   max-width: none;
   margin-bottom: 0;
-}
-
-.hero__video-caption a {
-  color: var(--color-plum);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 /* Credential bar */
@@ -702,11 +696,19 @@ strong {
     padding-right: 0;
     padding-left: var(--sp-5);
   }
+
+  .about__body p {
+    line-height: 1.4;
+  }
 }
 
 /* =============================================
    About this site
    ============================================= */
+.about-site.section {
+  padding-block: var(--sp-6);
+}
+
 .about-site__card {
   background: #fff;
   border-radius: var(--radius-lg);
@@ -784,6 +786,10 @@ strong {
 
   .about-site__heading {
     font-size: var(--text-lg);
+  }
+
+  .about-site__body {
+    line-height: 1.4;
   }
 }
 
