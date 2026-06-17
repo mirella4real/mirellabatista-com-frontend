@@ -1129,6 +1129,14 @@ strong {
   max-width: none;
 }
 
+@media (max-width: 767px) {
+  .experience__intro-text,
+  .role-card__summary,
+  .role-card__bullets {
+    line-height: 1.4;
+  }
+}
+
 .speaking__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
